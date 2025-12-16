@@ -3,6 +3,7 @@ package ua.maister.charm.back.seervice;
 import ua.maister.charm.back.dao.ProfileDao;
 import ua.maister.charm.back.model.Profile;
 
+import java.util.List;
 import java.util.Optional;
 
 public class ProfileService {
@@ -22,5 +23,14 @@ public class ProfileService {
         return dao.findById(id);
     }
 
-    //TODO delete - return(true/false), update - return(void), findAll - return(List)
+    public List<Profile> findAll() {
+        return dao.findAll();
+    }
+
+    public void update(Profile profile) { dao.update(profile); }
+
+    public boolean delete(Long id) {
+        if(id == null) return false;
+        return dao.delete(id);
+    }
 }
