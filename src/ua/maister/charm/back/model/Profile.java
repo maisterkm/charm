@@ -6,7 +6,7 @@ public class Profile {
 
     private String email;
 
-    private String nam;
+    private String name;
 
     private String surname;
 
@@ -28,12 +28,12 @@ public class Profile {
         this.email = email;
     }
 
-    public String getNam() {
-        return nam;
+    public String getName() {
+        return name;
     }
 
-    public void setNam(String nam) {
-        this.nam = nam;
+    public void setName(String nam) {
+        this.name = nam;
     }
 
     public String getSurname() {
@@ -50,5 +50,16 @@ public class Profile {
 
     public void setAbout(String about) {
         this.about = about;
+    }
+
+    @Override
+    public String toString() {
+        return "Profile{" +
+            "id=" + id +
+            ", email='" + email + '\'' +
+            ", nam='" + name + '\'' +
+            ", surname='" + surname + '\'' +
+            ", about='" + about + '\'' +
+            '}';
     }
 }
